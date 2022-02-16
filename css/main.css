@@ -12,6 +12,13 @@ h2{
 div{
     text-align: center;
 }
+
+.disp,#result::before{
+  content:"\A";
+  white-space:pre;
+}
+
+
 select,option,input,button,#result{
     font-size: 20px;
 }
@@ -44,9 +51,7 @@ select,option,input,button,#result{
       display: block;
       width: 100.5%;
     }
-    /*.to tr {
-      margin-bottom: 40px;
-    }*/
+    
   }
 
 
