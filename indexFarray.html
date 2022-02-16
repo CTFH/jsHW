@@ -44,38 +44,24 @@
             let index = document.getElementById("selectMood");
             
             index.onchange=function(){
-                //console.log("hi");
                 
                 let indexn=parseInt(this.value);
                 let str=results[indexn];
-                //console.log(str);
+
                 document.getElementById("result").textContent=str;  
-            
-                //line=""
-                //for(let i=0; i<results.length; i++){
-                //  line="documents.getElementById("    
-                //}
 
                 
-                let arr = document.getElemetsByClassName("disp");
+                let arr = document.getElementsByClassName("disp");
                 for(let i=0; i<arr.length; i++){
                     arr[i].style.display="none"
                 }
                 
                 let array = [, hawaiC, reggaeC, jazzC, natureC, popC, classicC, rockC]
                 
-                lines=[]
-                for(let i=0; i<results.length; i++){
-                    line='document.getElementById("'
-                    lines[i]=line+array[i]+'");'
-                }
+                
                 array[indexn].style.display="block"
             }
-
-
-            
-            
-                
+     
             
         }
         </script>
