@@ -13,7 +13,7 @@
 
     <h2>あなたの今の気分は？</h2>
     <div>
-    
+    <!--<form action="#" method="get">-->
     <select name="mood" id="selectMood">
         <option value="">今の気分を選んでください</option>
         <option value="1">南の島にリラックスしに旅行に行きたい</option>
@@ -25,15 +25,41 @@
         <option value="7">何かしらやってやるぜ！な気分</option>
     </select>
         
+        <!--<input type="button" value="決定" onclick="jump()">
+        <button onclick="jump()">決定２</button>-->
+    <!--</form>-->
           
         <div id="result"></div>
-        
+        <script>
+            //let index = document.getElementById("option");
+            
+            //picts=["","hawai","reggae","jazz","nature","pop","classic","rock"];
+            let results=[
+    		"選択なし",
+    		"hawaiian musicで旅行にいった気分になろう☆",
+    		"reggae musicで旅行にいった気分になろう★",
+    		"jazzでカフェ気分♪",
+    		"nature soundで癒されよう彡",
+    		"pop musicで踊っちゃう？",
+    		"静かなclassical musicでリラックス",
+    		"ロックでぶちかまそう!"
+            ];
+            //let jump=()=>{
+            let index = document.getElementById("selectMood");
+            //indexn=parseInt(index);
+            index.onchange=function(){
+                console.log("hi");
+                //alert(this.value)
+                let indexn=parseInt(this.value);
+            let str=results[indexn];
+            console.log(str);
+            document.getElementById("result").textContent=str;  
+            }
+            //}
+        </script>
     </div>
 
-    <script src="js/main.js"></script>
-
-    
-    <div id="hawaiC" class="disp">
+    <br>
     <h2><a id="hawai">hawaiian music</a></h2>
     <table class="to">
     <tr class="tro"><th>title</th><th>name</th><th>youtube</th><th>photo</th></tr>
@@ -43,11 +69,9 @@
     <tr><td>HAWAIIAN MUSIC - ALOHA BREEZE [NON_STOP_VER]</td><td></td>
         <td><a href=https://www.youtube.com/watch?v=etHDsUecb7U&feature=emb_imp_woyt>HAWAIIAN MUSIC - ALOHA BREEZE [NON_STOP_VER]</a></td>
         <td><img class="table-image" src="images/hawaiian.PNG" alt="hawaiian" ></td></tr>
-    </table>
-    </div>  
+    </table>  
 
-     
-    <div id="reggaeC" class="disp">
+     <br>
     <h2><a id="reggae">reggae</a></h2>
     <table class="to">
     <tr class="tro"><th>title</th><th>name</th><th>youtube</th><th>photo</th></tr><br>
@@ -55,10 +79,8 @@
         <td><a href=https://www.youtube.com/watch?v=uc2UEfWjvo8&feature=emb_imp_woyt>Reggae</a></td>
         <td><img class="table-image" src="images/InnerCircle.PNG" alt="reggae"></td></tr>
     </table>
-    </div>
     
-    
-    <div id="jazzC" class="disp">
+    <br>
     <h2><a id="jazz">jazz</a></h2>
     <table class="to">
     <tr class="tro"><th>title</th><th>name</th><th>youtube</th><th>photo</th></tr>
@@ -72,10 +94,8 @@
         <td><a href="https://www.youtube.com/watch?v=v_kIXDRswqU&feature=emb_imp_woyt">Un Homme et une Femme</a></td>
         <td><img class="table-image" src="images/M&W.PNG" alt="M&W"></td></tr>
     </table>
-    </div> 
-
-    
-    <div id="natureC" class="disp">
+     
+    <br>
     <h2><a id="nature">nature sound</a></h2>
     <table class="to">
     <tr class="tro"><th>title</th><th>name</th><th>youtube</th><th>photo</th></tr>
@@ -86,10 +106,8 @@
         <td><a href="https://www.youtube.com/watch?v=jX6kn9_U8qk&feature=emb_imp_woyt">Rain Sounds</a></td>
         <td><img class="table-image" src="images/rain.PNG"></td></tr>
     </table>
-    </div>
 
-    
-    <div id="popC" class="disp">
+     <br>
     <h2><a id="pop">pop</a></h2>
     <table class="to">
     <tr class="tro"><th>title</th><th>name</th><th>youtube</th><th>photo</th></tr>
@@ -103,10 +121,8 @@
         <td><a href="https://www.youtube.com/watch?v=6aZ-NYbiy3A">Maroon5 Greatest Hits</a></td>
         <td><img class="table-image" src="images/maroon5.PNG" alt="maroon5"></td></tr>
     </table>
-    </div>
 
-    
-    <div id="classicC" class="disp">
+    <br>
     <h2><a id="classic">classic</a></h2>
     <table class="to">
     <tr class="tro"><th>title</th><th>name</th><th>youtube</th><th>photo</th></tr>
@@ -120,10 +136,8 @@
         <td><a href="https://www.youtube.com/watch?v=6z82w0l6kwE">Traumerei</a></td>
         <td><img class="table-image" src="images/traumerei.PNG" alt="traumerei"></td></tr>
     </table>
-    </div>
    
-    
-    <div id="rockC" class="disp">
+    <br>
     <h2><a id="rock">rock</a></h2>
     <table class="to">
     <tr class="tro"><th>title</th><th>name</th><th>youtube</th><th>photo</th></tr>
@@ -143,8 +157,7 @@
         <td><a href="https://www.youtube.com/watch?v=-tJYN-eG1zk">We Will Rock You</a></td>
         <td><img class="table-image" src="images/queen.PNG" alt="queen"></td></tr>
     </table>
-    </div>
-
+   
 
 </body>
 </html>
