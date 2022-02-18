@@ -18,6 +18,9 @@ div{
   white-space:pre;
 }
 
+.disp{
+  display:none;
+}
 
 select,option,input,button,#result{
     font-size: 20px;
